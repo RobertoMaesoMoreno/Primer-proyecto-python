@@ -1,44 +1,56 @@
-## Carpeta src
+# Proyecto del Primer Cuatrimestre Fundamentos de Programación (Curso  20/21)
+Autor/a: Roberto Maeso Moreno;   uvus:&lt;robmamemor&gt;
+
+
+El proyecto tiene como objetivo analizar los datos de pokemons publicados en el dataset que se ha proporcionado a los alumnos. El dataset original tiene 13 columnas.
+
+
+## Estructura de las carpetas del proyecto
 
 * **/src**: Contiene los diferentes módulos de Python que conforman el proyecto.
-  * **\<modulo1.py\>**: Describe aquí el módulo principal.
-  * **\<modulo1_test.py\>**: Describe aquí el módulo de pruebas.
-  * **\<modulo2.py\>**: Añade descripciones para el resto de módulos que pueda tener tu proyecto. Por ejemplo, sería conveniente tener un módulo separado con funciones genéricas para dibujar gráficas y/o otro con funciones genéricas de conversión de tipos. 
+    * **pokemon.py**: Contiene funciones para explotar los datos sobre los pokemon.
+    * **test_pokemon.py**: Contiene funciones de test para probar las funciones del módulo `pokemon.py`. En este módulo está el main. 
 * **/data**: Contiene el dataset o datasets del proyecto
-    * **\<dataset1.csv\>**: Añade una descripción genérica del dataset.
-    * **\<dataset2.csv\>**: Añade una descripción del resto de datasets que puedas tener.
-    
+    * **pokemon.csv**: Archivo con los datos de pokemon que van a ser explotados.
+        
 ## Estructura del *dataset*
 
-Aquí debes describir la estructura del dataset explicando qué representan los datos que contiene y la descripción de cada una de las columnas.
+Cada fila del dataset recoge los datos de los pokemon, siendo:
 
-El dataset está compuesto por \<N\> columnas, con la siguiente descripción:
+nombre, tipo1, tipo2, HP, Attk, Def, AttkSP, DefSP, Spd, Gener, Legend, Date
 
-* **\<columna 1>**: de tipo \<tipo\>, representa....
-* **\<columna 2>**: de tipo \<tipo\>, representa....
-....
+* **numero**: de tipo int, es un identificador entero.
+* **nombre**: de tipo str, representa el nombre del pokemon.
+* **HP**: de tipo int, representa sus puntos de vida.
+* **Attk**: de tipo int, representa sus puntos de ataque.
+* **Def**: de tipo int, representa sus puntos de defensa.
+* **AttkSP**: de tipo int, representa sus puntos de ataque especial.
+* **Spd**: de tipo int, representa sus puntos de velocidad.
+* **Gener**: de tipo int, representa a qué generación pertenece.
+* **Legend**: de tipo booligan, representa si es legendario o no.
+* **Date**: de tipo str, representa la fecha.
 
 ## Tipos implementados
 
-Descrbe aquí la o las namedtuple que defines en tu proyecto.
+Para trabajar con los datos del dataset se ha definido la siguiente tupla con nombre:
+
+`pokemon=collections.namedtuple("Pokemon", "numero nombre tipo1 tipo2 HP Attk Def AttkSP DefSP Spd Gener Legend Date")`
+
+en la que los tipos de cada uno de los campos son los siguientes:
+
+`Info(int, str, str, str, int, int, int, int, int, int, int, bool, str)`
 
 ## Funciones implementadas
-Añade aquí descripciones genéricas de las funciones, que luego debes acompañar con comentarios de tipo documentación en el código
+En este proyecto se han implementado las siguientes funciones, que están clasificadas según los bloques y tipos de funciones que se requieren en cada una de las entregas.
+El módulo principal es el módulo pokemon.py, así que aquí es donde se hará referencia a cada uno de los bloques de las entregas.
+### Módulo pokemon
 
-### \<modulo 1\>
+#### Entrega 1
 
-* **<funcion 1>**: Descripción de la función 1.
-* **<funcion 2>**: Descripción de la función 2.
-* ...
+* **Bloque 0**  
+  * **lee_csv(fichero)**: lee los datos del fichero csv y devuelve una lista de tuplas de tipo Pokemon con los datos del fichero.
 
-### \<test modulo 1\>
+### Módulo test_pokemon
+En el módulo de pruebas se han definido las siguientes funciones de pruebas, cada una de las cuales se usa para probar la función con que tiene el mismo nombre. Por ejemplo, la función `test_lee_csv` prueba la función `lee_csv`.
 
-* **<test funcion 1>**: Descripción de las pruebas realizadas a la función 1.
-* **<test funcion 2>**: Descripción de las pruebas realizadas a la función 2.
-* ...
-* 
-### \<modulo 2\>
-
-* **<funcion 1>**: Descripción de la función 1.
-* **<funcion 2>**: Descripción de la función 2.
-* ...
+* **test_lee_csv(fichero)**
