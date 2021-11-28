@@ -50,7 +50,25 @@ El módulo principal es el módulo pokemon.py, así que aquí es donde se hará 
 * **Bloque 0**  
   * **lee_csv(fichero)**: lee los datos del fichero csv y devuelve una lista de tuplas de tipo Pokemon con los datos del fichero.
 
+#### Entrega 2
+* **Bloque 2**
+  * **filtrar_por_tipo1(tipo1)**: filtra los datos del fichero csv por el primer tipo elemental de Pokemon que se le proporciona a la función.
+  
+  * **filtrar_por_attk(attk)**: filtra los datos del fichero csv, devolviendo en una lista los que su ataque sea mayor que el propocionado a la función.
+
+  * **filtrar_por_legendario(tipo1, tipo2, legendario)**: devuelve una lista con los tipos de los Pokémon que se le proporcione a la función según si se le indique si son legendarios o no en la misma.
+
+* **Bloque 3**
+
+  * **suma_especial(tipo1, generacion)**: suma todos los parámetros de ataque especial y defensa especial del tipo que se le proporcione a la función a partir de la generación que se indique.
+
+  * **promedio_HP(legendario, velocidad)**: da una media del HP de todos los Pokemon indicando en la función si se filtra por legendarios o los que no lo son y si su velocidad supera la proporcionada en la función.
+
 ### Módulo test_pokemon
 En el módulo de pruebas se han definido las siguientes funciones de pruebas, cada una de las cuales se usa para probar la función con que tiene el mismo nombre. Por ejemplo, la función `test_lee_csv` prueba la función `lee_csv`.
 
 * **test_lee_csv(fichero)**
+* **test_filtrar_por_tipo1(tipo1)**
+* **test_filtrar_por_attk(attk)**
+* **test_filtrar_por_legendario(tipo1,tipo2,legendario)**
+* **test_suma_especial(tipo1='Water',generacion=3)**
