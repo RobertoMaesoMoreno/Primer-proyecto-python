@@ -46,22 +46,3 @@ def test_mayor_ataque(velocidad):
 def test_mayor_velocidad(n):
     print(mayor_velocidad(n))
     print('Tres últimos: ', lista_pokemon[-3:])
-    
-#print(test_lee_csv(r'.\data\pokemon.csv'))
-#print(filtrar_por_tipo1('Poison'))
-#print(filtrar_por_attk(50))
-#print(filtrar_por_legendario('Dragon', 'Psychic', True))
-#print(suma_especial())
-#print(promedio_HP())
-
-
-#print(test_filtrar_por_tipo1('Poison'))
-#print(test_filtrar_por_attk(50))
-#print(test_filtrar_por_legendario('Dragon', 'Psychic', True))
-#print(test_suma_especial())
-#print(promedio_HP())
-
-#print(test_mayor_ataque(0))
-#print(test_mayor_velocidad(3))
-
-

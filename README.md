@@ -64,6 +64,22 @@ El módulo principal es el módulo pokemon.py, así que aquí es donde se hará 
 
   * **promedio_HP(legendario, velocidad)**: da una media del HP de todos los Pokemon indicando en la función si se filtra por legendarios o los que no lo son y si su velocidad supera la proporcionada en la función.
 
+#### Entrega 3
+
+* **Bloque 4**
+
+  * **mayor_ataque(velocidad)**: Devuelve el parámetro de mayor ataque de todos los Pokemon si la velocidad era mayor a la que se le indicaba.
+
+* **Bloque 5**
+
+  * **mayor_velocidad(n)**: devuelve una lista de cantidad n de los parámetros más altos en el campo de velocidad.
+
+* **Bloque 6**
+
+  * **diccionario_max_legendario(legendario)**: devuelve un diccionario con el mayor valor de cada campo del csv según si se les indica si son legendarios o no.
+
+  * **diccionario_generacion(generacion)**: devuelve un diccionario con todos los parámetros de cada campo según la generación que se le indique a la función.
+
 ### Módulo test_pokemon
 En el módulo de pruebas se han definido las siguientes funciones de pruebas, cada una de las cuales se usa para probar la función con que tiene el mismo nombre. Por ejemplo, la función `test_lee_csv` prueba la función `lee_csv`.
 
@@ -72,3 +88,5 @@ En el módulo de pruebas se han definido las siguientes funciones de pruebas, ca
 * **test_filtrar_por_attk(attk)**
 * **test_filtrar_por_legendario(tipo1,tipo2,legendario)**
 * **test_suma_especial(tipo1='Water',generacion=3)**
+
+
