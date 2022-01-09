@@ -1,10 +1,15 @@
 import csv
-from pokemon import lee_csv
+from pokemon import diccionario_generacion, lee_csv
 from pokemon import filtrar_por_tipo1
 from pokemon import filtrar_por_attk
 from pokemon import filtrar_por_legendario
 from pokemon import suma_especial
 from pokemon import promedio_HP
+from pokemon import mayor_velocidad
+from pokemon import mayor_ataque
+from pokemon import diccionario_generacion
+from pokemon import diccionario_max_legendario
+
 
 def test_lee_csv(fichero):
     lista_pokemon= lee_csv(fichero)
@@ -34,6 +39,14 @@ def test_suma_especial(tipo1='Water',generacion=3):
     lista_pokemon= suma_especial(tipo1,generacion)
     print(lista_pokemon)
 
+def test_mayor_ataque(velocidad):
+    lista_pokemon= suma_especial(tipo1,generacion)
+    print(mayor_ataque(velocidad))
+
+def test_mayor_velocidad(n):
+    print(mayor_velocidad(n))
+    print('Tres últimos: ', lista_pokemon[-3:])
+    
 #print(test_lee_csv(r'.\data\pokemon.csv'))
 #print(filtrar_por_tipo1('Poison'))
 #print(filtrar_por_attk(50))
@@ -46,7 +59,9 @@ def test_suma_especial(tipo1='Water',generacion=3):
 #print(test_filtrar_por_attk(50))
 #print(test_filtrar_por_legendario('Dragon', 'Psychic', True))
 #print(test_suma_especial())
-print(promedio_HP())
+#print(promedio_HP())
 
+#print(test_mayor_ataque(0))
+#print(test_mayor_velocidad(3))
 
 

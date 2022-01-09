@@ -54,3 +54,46 @@ def promedio_HP(legendario=True, velocidad=25):
         suma_HP += HeP
     data = suma_HP/len(dataa)
     return data
+
+def mayor_ataque(velocidad):
+    lista=lee_csv(r'.\data\pokemon.csv')
+    data=[]
+    data=[a.Attk for a in lista if a.Spd >= velocidad]
+    data.sort(reverse=True)
+    dataa= data[0]
+    return dataa
+
+def mayor_velocidad(n):
+    lista= lee_csv(r'.\data\pokemon.csv')
+    data=[a.Spd for a in lista]
+    dataa=[]
+    data.sort(reverse=True)
+    nn=0
+    while n>0:
+        dataa.append(data[nn])
+        nn=nn+1
+        n=n-1
+    return dataa
+    
+def diccionario_max_legendario(legendario):
+    lista= lee_csv(r'.\data\pokemon.csv')
+    HeP =  [a.HP for a in lista if a.Legend ==legendario]
+    Atk =  [a.Attk for a in lista if a.Legend ==legendario]
+    Defd = [a.Def for a in lista if a.Legend ==legendario]
+    AtkSP = [a.AttkSP for a in lista if a.Legend ==legendario]
+    DefdSP =  [a.DefSP for a in lista if a.Legend ==legendario]
+    Sped= [a.Spd for a in lista if a.Legend ==legendario]
+    dic = {'HeaP': max(HeP), 'Atak' : max(Atk), 'Defed' : max(Defd),'AtakSP' : max(AtkSP),'DefedSP' : max(DefdSP),'Speed' : max(Sped)}
+    return (dic)
+  
+
+def diccionario_generacion(generacion):
+    lista= lee_csv(r'.\data\pokemon.csv')
+    HeP =  [a.HP for a in lista if a.Gener ==generacion]
+    Atk =  [a.Attk for a in lista if a.Gener ==generacion]
+    Defd = [a.Def for a in lista if a.Gener ==generacion]
+    AtkSP = [a.AttkSP for a in lista if a.Gener ==generacion]
+    DefdSP =  [a.DefSP for a in lista if a.Gener ==generacion]
+    Sped= [a.Spd for a in lista if a.Gener ==generacion]
+    dic = {'HeaP': HeP, 'Atak' : Atk, 'Defed' : Defd,'AtakSP' : AtkSP,'DefedSP' : DefdSP,'Speed' : Sped}
+    return (dic)   
